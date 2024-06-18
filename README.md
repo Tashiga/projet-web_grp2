@@ -1,5 +1,12 @@
 ## projet-web_grp2
 
+## Membres du groupe : 
+
+- Julien CHAZAL
+- Julien SOMASUNDARAM
+- Robin MALPART
+- Sashtiga SASIRAJAH
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
