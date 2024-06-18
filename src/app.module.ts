@@ -6,6 +6,10 @@ import * as redisStore from 'cache-manager-redis-store';
 import { ConfigModule } from '@nestjs/config';
 import { HealthController } from './health/health.controller';
 import { BullModule } from '@nestjs/bull'; // Importez BullModule
+import { GraphQLModule } from '@nestjs/graphql';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { join } from 'path';
+import { HealthResolver } from './health/health.resolver';
 
 @Module({
   imports: [
@@ -26,8 +30,13 @@ import { BullModule } from '@nestjs/bull'; // Importez BullModule
     BullModule.registerQueue({
       name: 'health-queue',
     }),
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      sortSchema: true,
+    }),
   ],
   controllers: [AppController, HealthController],
-  providers: [AppService],
+  providers: [AppService, HealthResolver],
 })
 export class AppModule {}
