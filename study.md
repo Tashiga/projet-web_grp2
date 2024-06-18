@@ -24,19 +24,28 @@ Pour installer NestJS, vous aurez besoin de Node.js et npm (ou yarn). Voici les 
 
 1. Installez le CLI de NestJS globalement :
 
-npm install -g @nestjs/cli
+
+```bash
+$ npm install -g @nestjs/cli
+```
 
 2. Créez un nouveau projet NestJS :
 
-nest new project-name
+```bash
+$ nest new project-name
+```
 
 3. Naviguez dans le répertoire du projet :
 
-cd project-name
+```bash
+$ cd project-name
+```
 
 4. Démarrez le projet :
 
-npm run start
+```bash
+$ npm run start
+```
 
 ##  Architecture modulaire de NestJS
 
