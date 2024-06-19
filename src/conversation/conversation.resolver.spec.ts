@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConversationResolver } from './conversation.resolver';
+import { BullModule } from '@nestjs/bull';
 
 describe('ConversationResolver', () => {
   let resolver: ConversationResolver;
@@ -7,6 +8,11 @@ describe('ConversationResolver', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [ConversationResolver],
+      imports: [
+        BullModule.registerQueue({
+          name: 'health-queue',
+        }),
+      ],
     }).compile();
 
     resolver = module.get<ConversationResolver>(ConversationResolver);
@@ -19,8 +25,8 @@ describe('ConversationResolver', () => {
       const result = resolver.createConversation(user1Id, user2Id);
       expect(result).toBeDefined();
       expect(result.users).toEqual([
-        { id: user1Id, username: 'User1', password: 'pass1' },
-        { id: user2Id, username: 'User2', password: 'pass2' },
+        { id: user1Id, username: 'User1', passeword: 'pass1' },
+        { id: user2Id, username: 'User2', passeword: 'pass2' },
       ]);
     });
   });
