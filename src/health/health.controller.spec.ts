@@ -19,7 +19,8 @@ describe('HealthController', () => {
     controller = module.get<HealthController>(HealthController);
   });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
+  it('should return health status', async () => {
+    const result = await controller.check();
+    expect(result.status).toBe('ok');
   });
 });
