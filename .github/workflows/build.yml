@@ -27,5 +27,12 @@ jobs:
     - name: Build project
       run: npm run build
 
+    - name: Build Docker image
+      run: docker build -t my-nestjs-app .
+
     # - name: Run tests
     #   run: npm run test
+
+
+    - name: Clean up
+      run: docker image prune -f
