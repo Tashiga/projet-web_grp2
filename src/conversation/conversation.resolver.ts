@@ -1,10 +1,14 @@
 import { Args, Mutation, Query, Resolver } from "@nestjs/graphql";
 import { Conversation } from "./conversation.model";
 import { Message } from "src/message/message.model";
+import { InjectQueue } from "@nestjs/bull";
+import { Queue } from "bull";
 
 @Resolver(of => Conversation)
 export class ConversationResolver {
   private conversations: Conversation[] = [];
+
+  constructor(@InjectQueue('health-queue') private messageQueue: Queue) {}
 
   @Query(returns => [Conversation])
   getUserConversations(@Args('userId') userId: number): Conversation[] {
@@ -31,13 +35,13 @@ export class ConversationResolver {
   }
 
   @Mutation(returns => Message)
-  sendMessage(
+  async sendMessage(
     @Args('conversationId') conversationId: number,
     @Args('userFromId') userFromId: number,
     @Args('userToId') userToId: number,
     @Args('message') message: string,
     @Args('time', { nullable: true }) time: string
-  ): Message {
+  ): Promise<Message> {
     const conversation = this.conversations.find(conv => conv.id === conversationId);
     if (!conversation) throw new Error('Conversation not found');
 
@@ -51,6 +55,8 @@ export class ConversationResolver {
     };
 
     conversation.messages.push(newMessage);
+    await this.messageQueue.add('sendMessage', newMessage);
+    console.log("All OK !");
     return newMessage;
   }
 }
