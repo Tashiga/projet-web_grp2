@@ -1,6 +1,6 @@
 import { Args, Mutation, Query, Resolver } from "@nestjs/graphql";
 import { Conversation } from "./conversation.model";
-import { Message } from "src/message/message.model";
+import { Message } from "../message/message.model";
 import { InjectQueue } from "@nestjs/bull";
 import { Queue } from "bull";
 
