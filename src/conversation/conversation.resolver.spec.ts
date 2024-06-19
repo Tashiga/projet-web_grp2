@@ -1,14 +1,13 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { HealthController } from './health.controller';
-import { Queue } from 'bull';
+import { ConversationResolver } from './conversation.resolver';
 import { BullModule } from '@nestjs/bull';
 
-describe('HealthController', () => {
-  let controller: HealthController;
+describe('ConversationResolver', () => {
+  let resolver: ConversationResolver;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [HealthController],
+      providers: [ConversationResolver],
       imports: [
         BullModule.registerQueue({
           name: 'health-queue',
@@ -16,10 +15,10 @@ describe('HealthController', () => {
       ],
     }).compile();
 
-    controller = module.get<HealthController>(HealthController);
+    resolver = module.get<ConversationResolver>(ConversationResolver);
   });
 
   it('should be defined', () => {
-    expect(controller).toBeDefined();
+    expect(resolver).toBeDefined();
   });
 });

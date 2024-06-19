@@ -20,6 +20,16 @@ services:
       - 6379:6379
     volumes:
       - redis:/data
+  test:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    volumes:
+      - .:/usr/src/app
+    env_file:
+    - .env
+    command: npm run test
 
 volumes:
   redis:
