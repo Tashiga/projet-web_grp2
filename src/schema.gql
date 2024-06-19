@@ -2,6 +2,42 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Conversation {
+  id: ID!
+  messages: [Message!]!
+  users: [User!]!
+}
+
+type Message {
+  conversationId: ID!
+  id: ID!
+  message: String!
+  time: String
+  userFrom: User!
+  userTo: User!
+}
+
+type Mutation {
+  createConversation(user1Id: Float!, user2Id: Float!): Conversation!
+  createUser(passeword: String!, username: String!): User!
+  deleteUser(id: Float!): Boolean!
+  sendMessage(conversationId: Float!, message: String!, time: String, userFromId: Float!, userToId: Float!): Message!
+  updateUser(id: Float!, passeword: String, username: String): User!
+}
+
 type Query {
+  getConversationMessages(conversationId: Float!): [Message!]!
+  getMessage(id: Float!): Message!
+  getMessages: [Message!]!
+  getMessagesByUser(userId: Float!): [Message!]!
+  getUser(id: Float!): User!
+  getUserConversations(userId: Float!): [Conversation!]!
+  getUsers: [User!]!
   healthCheck: String!
+}
+
+type User {
+  id: ID!
+  passeword: ID!
+  username: String!
 }
