@@ -10,6 +10,9 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { HealthResolver } from './health/health.resolver';
+import { ConversationResolver } from './conversation/conversation.resolver';
+import { UserResolver } from './user/user.resolver';
+import { MessageResolver } from './message/message.resolver';
 
 @Module({
   imports: [
@@ -37,6 +40,6 @@ import { HealthResolver } from './health/health.resolver';
     }),
   ],
   controllers: [AppController, HealthController],
-  providers: [AppService, HealthResolver],
+  providers: [AppService, HealthResolver, ConversationResolver, UserResolver, MessageResolver],
 })
 export class AppModule {}
