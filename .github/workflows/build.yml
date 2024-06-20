@@ -39,6 +39,14 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: docker push ${{ secrets.DOCKER_USERNAME }}/my-nestjs-app
 
+    - name: Deploy to Render
+      run: |
+        curl -X POST https://api.render.com/deploy/srv-cppvfdo8fa8c739n3flg \
+        -H 'Authorization: Bearer ${{ secrets.RENDER_API_KEY }}' \
+        -H 'Accept: application/json' \
+        -H 'Content-Type: application/json' \
+        --data '{}'
+
     - name: Run tests
       run: npm run test
 
