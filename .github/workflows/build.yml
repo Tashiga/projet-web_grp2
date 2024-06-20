@@ -34,10 +34,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t my-nestjs-app .
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-nestjs-app .
 
     - name: Push Docker image to Docker Hub
-      run: docker push my-nestjs-app
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/my-nestjs-app
 
     - name: Run tests
       run: npm run test
