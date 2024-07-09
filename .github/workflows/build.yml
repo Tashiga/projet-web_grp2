@@ -79,6 +79,6 @@ jobs:
         -H 'Content-Type: application/json' \
         --data '{}'
 
-    - name: Clean up
-      run: docker image prune -f
-      working-directory: back
+    # - name: Clean up
+    #   run: docker image prune -f
+    #   working-directory: back
