@@ -32,8 +32,12 @@ jobs:
       run: npm run build
       working-directory: ./back
 
-    - name: Hello
-      run: echo 'hello'
+    - name: Install Newman
+      run: npm install -g newman
+      working-directory: ./back
+
+    - name: Run Postman tests with Newman
+      run: newman run postman_collection.json
       working-directory: ./back
 
     - name: Log in to Docker Hub
