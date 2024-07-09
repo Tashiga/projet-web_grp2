@@ -2,6 +2,9 @@
 /dist
 /node_modules
 /build
+/back/dist
+/back/node_modules
+/back/build
 
 # Logs
 logs
