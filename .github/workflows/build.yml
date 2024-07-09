@@ -21,6 +21,9 @@ jobs:
       with:
         node-version: '16'
 
+    - name: Install Nest CLI globally
+      run: npm install -g @nestjs/cli
+
     - name: Install dependencies
       run: npm install
       working-directory: ./back
