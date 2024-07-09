@@ -19,12 +19,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -45,12 +46,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -71,12 +73,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -97,12 +100,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -123,12 +127,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -149,12 +154,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -175,12 +181,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -201,12 +208,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -227,12 +235,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -253,12 +262,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -279,12 +289,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -305,12 +316,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -331,12 +343,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -357,12 +370,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -383,12 +397,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -409,12 +424,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -435,12 +451,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -461,12 +478,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
@@ -487,12 +505,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/graphql",
-					"protocol": "http",
+					"raw": "https://projet-web-grp2.onrender.com/graphql",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"projet-web-grp2",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"graphql"
 					]
