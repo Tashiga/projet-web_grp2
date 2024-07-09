@@ -81,4 +81,4 @@ jobs:
 
     - name: Clean up
       run: docker image prune -f
-      working-directory: ./back
+      working-directory: back
