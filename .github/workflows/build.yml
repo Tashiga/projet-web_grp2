@@ -26,8 +26,8 @@ jobs:
       working-directory: ./back
 
     - name: Build project
-      run: npx nest build
-      working-directory: ././back
+      run: npm run build
+      working-directory: ./back
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
