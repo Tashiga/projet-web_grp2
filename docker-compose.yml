@@ -2,11 +2,11 @@ services:
   api:
     build:
       dockerfile: Dockerfile
-      context: .
+      context: ./back
       # Only will build development stage from our dockerfile
       target: development
     volumes:
-      - .:/usr/src/app
+      - ./back:/usr/src/app
     env_file:
     - .env
     # Run a command against the development stage of the image
@@ -25,10 +25,10 @@ services:
   test:
     build:
       dockerfile: Dockerfile
-      context: .
+      context: ./back
       target: development
     volumes:
-      - .:/usr/src/app
+      - ./back:/usr/src/app
     env_file:
     - .env
     command: npm run test
