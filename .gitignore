@@ -8,6 +8,7 @@
 /front/dist
 /front/node_modules
 /front/build
+/back/postgres
 
 # Logs
 logs

@@ -12,39 +12,27 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model User {
-  id        Int       @id @default(autoincrement())
-  username  String    @unique
-  passeword String
-  messages  Message[]
-  // Ajout pour la relation plusieurs-à-plusieurs avec Conversation
-  conversations UserConversations[]
+  id        Int          @id @default(autoincrement())
+  username  String       @unique
+  password  String       // Correction de la faute de frappe "passeword" en "password"
+  sentMessages Message[] @relation("UserFrom")
+  conversations Conversation[] @relation("ConversationUsers")
 }
 
 model Message {
-  id             Int          @id @default(autoincrement())
-  message        String
-  time           DateTime     @default(now())
-  userId         Int
-  user           User         @relation(fields: [userId], references: [id])
-  conversationId Int
-  userToId       Int
-  // Ajout pour la relation avec Conversation
-  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  id              Int          @id @default(autoincrement())
+  message         String
+  time            DateTime?    @default(now())
+  userFromId      Int
+  userFrom        User         @relation(name: "UserFrom", fields: [userFromId], references: [id])
+  conversationId  Int
+  conversation    Conversation @relation(fields: [conversationId], references: [id])
 }
 
 model Conversation {
   id        Int       @id @default(autoincrement())
   messages  Message[]
-  users UserConversations[]
-}
-
-// Ajout pour la relation plusieurs-à-plusieurs entre User et Conversation
-model UserConversations {
-  user          User         @relation(fields: [userId], references: [id])
-  userId        Int
-  conversation  Conversation @relation(fields: [conversationId], references: [id])
-  conversationId Int
-  
-  @@id([userId, conversationId])
+  users     User[]    @relation("ConversationUsers")
 }
