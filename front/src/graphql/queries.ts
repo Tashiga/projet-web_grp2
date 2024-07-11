@@ -8,3 +8,17 @@ export const GET_USERS = gql`
     }
   }
 `;
+
+export const GET_CONVERSATION_MESSAGES = gql`
+  query GetConversationMessages($conversationId: Int!) {
+    getConversationMessages(conversationId: $conversationId) {
+      id
+      userFrom {
+        id
+        username
+      }
+      content: message
+      timestamp: time
+    }
+  }
+`;

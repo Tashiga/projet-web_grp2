@@ -1,19 +1,43 @@
+// App.js
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/header';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Userlist from './pages/userlist';
-import Conversation from './pages/conversation'; // Importez votre composant Conversation
+import Conversation from './pages/conversation';
+import Signup from './pages/signup';
+import Login from './pages/login';
+import Header from './components/header';
+import { AuthProvider, useAuth } from './utils/AuthContext';
+
+const AppRoutes = () => {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <Routes>
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      {user ? (
+        <>
+          <Route path="/" element={<Header><Userlist /></Header>} />
+          <Route path="/conversation/:id" element={<Header><Conversation /></Header>} />
+        </>
+      ) : (
+        <Route path="*" element={<Navigate to="/login" />} />
+      )}
+    </Routes>
+  );
+};
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header>
-        <Routes>
-          <Route path="/" element={<Userlist />} />
-          <Route path="/conversation/:id" element={<Conversation />} /> {/* Ajoutez cette route */}
-        </Routes>
-      </Header>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

@@ -5,8 +5,6 @@ import { User } from "./user.model";
 export class UserResolver {
   private users: User[] = [];
 
-  // Add your user queries and mutations here
-
   @Query(returns => [User])
   getUsers(): User[] {
     return this.users;
@@ -20,7 +18,7 @@ export class UserResolver {
   @Mutation(returns => User)
   createUser(
     @Args('username') username: string,
-    @Args('passeword') passeword: string
+    @Args('password') passeword: string
   ): User {
     const newUser: User = {
       id: this.users.length + 1,
@@ -32,10 +30,20 @@ export class UserResolver {
   }
 
   @Mutation(returns => User)
+  loginUser(
+    @Args('username') username: string,
+    @Args('password') password: string
+  ): User {
+    const user = this.users.find(user => user.username === username && user.passeword === password);
+    if (!user) throw new Error('Invalid credentials');
+    return user;
+  }
+
+  @Mutation(returns => User)
   updateUser(
     @Args('id') id: number,
     @Args('username', { nullable: true }) username?: string,
-    @Args('passeword', { nullable: true }) passeword?: string
+    @Args('password', { nullable: true }) passeword?: string
   ): User {
     const user = this.users.find(user => user.id === id);
     if (!user) throw new Error('User not found');
@@ -54,5 +62,4 @@ export class UserResolver {
     this.users.splice(userIndex, 1);
     return true;
   }
-
 }
